@@ -23,3 +23,16 @@ cachemean <- function(x, ...){
     x$setmean(m)
     m
 }
+
+## load week 2 assignment and run test cases.
+
+source("ProgrammingAssignment2\cachematrix.R")
+amatrix = makeCacheMatrix(matrix(c(1,2,3,4),nrow=2, ncol=2))
+amatrix$get()
+cacheSolve(amatrix)
+amatrix$getInverse()
+cacheSolve(amatrix)
+amatrix$set(matrix(c(0,5,99,66), nrow=2,ncol=2))
+cacheSolve(amatrix)
+amatrix$get()
+amatrix$getInverse()
